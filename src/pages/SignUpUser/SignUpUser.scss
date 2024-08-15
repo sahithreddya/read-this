@@ -1,0 +1,26 @@
+@use '../../App';
+// @use 'SignInUser';
+
+.signup__home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100vh;
+}
+
+.signup__component {
+    border-radius: 6px;
+    background-color: App.$color-primary-100;
+    border: solid 1px App.$color-primary-300;
+    padding: 16px;
+    margin: 32px;
+}
+
+.signup__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}

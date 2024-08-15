@@ -1,0 +1,80 @@
+@use "../../App";
+
+.article__container {
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  height: 120px;
+  border-bottom: 1px solid hsl(1, 1, 1, 0.1);
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  // margin: 8px;
+
+  &:hover {
+    background-color: hsl(1, 1, 1, 0.05);
+  }
+
+  &:first-child {
+    border-top: 1px solid hsl(1, 1, 1, 0.1) 
+  }
+
+  .article__image-container {
+    display: flex;  
+  }
+
+  .article__image {
+    object-fit: cover;
+    width: 200px;
+  }
+
+  .article__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    p {
+      margin: 0;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .article__title {
+      font-size: App.$font-size_title;
+      font-weight: App.$font-weight_bold;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+      // margin: 0;
+    }
+
+    .article__url {
+      font-style: italic;
+      color: App.$color-gray_text;
+      font-size: App.$font-size_subtitle;
+      font-weight: App.$font-weight_light;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+
+    .article__description {
+      flex-grow: 1;
+      font-size: App.$font-size_p;
+      font-weight: App.$font-weight_regular;
+    }
+
+    .article__user {
+      font-size: App.$font-size_sublabel;
+      font-weight: App.$font-weight_bold;
+      color: App.$color-gray_text;
+    }
+  }
+}

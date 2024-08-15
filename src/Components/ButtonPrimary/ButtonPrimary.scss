@@ -1,0 +1,43 @@
+@use "../../App";
+
+.buttonStyle {
+  font-family: Inter, sans-serif;
+  border-radius: 6px;
+  border: solid 1px App.$color-primary-400;
+  font-weight: 600;
+  color: white;
+  background: App.$color-primary-300;
+  padding: 8px;
+  transition: 0.3s;
+  height: fit-content;
+
+  &:hover {
+    cursor: pointer;
+    background: App.$color-primary-400;
+    border-color: App.$color-primary-500;
+  }
+
+  &.loading {
+    background: App.$color-loading-background;
+    border-color: App.$color-loading-border;
+    color: App.$color-loading-text;
+  }
+}
+
+.buttonStyleSecondary {
+  font-family: Inter, sans-serif;
+  border-radius: 6px;
+  border: solid 1px App.$color-primary-400;
+  font-weight: 600;
+  color: App.$color-primary-400;
+  background: App.$color-secondary;
+  padding: 8px;
+  transition: 0.3s;
+  height: fit-content;
+
+  &:hover {
+    cursor: pointer;
+    background: App.$color-secondary-background;
+    border-color: App.$color-primary-500;
+  }
+}

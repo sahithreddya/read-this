@@ -1,0 +1,26 @@
+@use "../../App";
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .inputField {
+    border-radius: 6px;
+    border: solid 1px App.$color-primary-300;
+    padding: 8px;
+    width: 250px;
+    // margin-bottom: 16px;
+  }
+
+  .inputTitle {
+    margin: 0px;
+    font-weight: 600;
+  }
+}
+
+.inputContainer:nth-last-child(1) {
+  .inputField {
+    // margin-bottom: 0;
+  }
+}
